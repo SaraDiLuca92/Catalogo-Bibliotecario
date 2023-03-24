@@ -1,4 +1,4 @@
-package catalogoBibliotecario;
+ package catalogoBibliotecario;
 
 import java.io.Serializable;
 

@@ -41,15 +41,20 @@ public class Runnable {
             System.out.println(elemento.toString());
         }
         
-        // Ricerca elemento tramite codice ISBN
+     // Ricerca elemento tramite codice ISBN ed elimiazione
         Optional<ElementoCatalogo> elementoTrovato = archivio.cercaPerISBN(1001);
         System.out.println("Elemento trovato tramite codice ISBN:");
         if (elementoTrovato.isPresent()) {
-            System.out.println(elementoTrovato.get().toString());
+            ElementoCatalogo elementoRimosso = elementoTrovato.get();
+            System.out.println(elementoRimosso.toString());
+            archivio.rimuoviPerISBN(elementoRimosso.getCodiceISBN());
+            catalogo.remove(elementoRimosso);
+            System.out.println("Elemento rimosso con successo: " + elementoRimosso + " ora la lista è: " + catalogo);
         } else {
             System.out.println("Nessun elemento trovato con il codice ISBN specificato.");
         }
-        
+
+
         // Ricerca elementi tramite anno di pubblicazione
         List<ElementoCatalogo> elementiPerAnno = archivio.cercaPerAnnoPubblicazione(2000);
         System.out.println("Elementi trovati per anno di pubblicazione:");

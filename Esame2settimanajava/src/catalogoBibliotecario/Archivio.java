@@ -64,6 +64,13 @@ public class Archivio implements Serializable {
 		return listaElementi;
 	}
 
+	public void rimuoviPerISBN(long codiceISBN) {
+		listaElementi.stream()
+                .filter(elemento -> elemento.getCodiceISBN() != codiceISBN)
+                .collect(Collectors.toList());
+		
+	}
+
 	
 	}
 
