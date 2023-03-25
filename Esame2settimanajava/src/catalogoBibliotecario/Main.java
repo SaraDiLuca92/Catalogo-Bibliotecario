@@ -28,7 +28,7 @@ public class Main  {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Aggiungi un libro nuovo, cominciamo! Inserisci il codice ISBN:");
         int isbn = scanner.nextInt();
-        scanner.nextLine(); // Consuma il carattere di fine linea lasciato dal metodo nextInt()
+        scanner.nextLine(); 
 
         System.out.println("Inserisci il titolo:");
         String titolo = scanner.nextLine();
@@ -71,18 +71,18 @@ public class Main  {
      // Aggiunta di una nuova rivista all'archivio
      System.out.println("Aggiungi una rivista nuova, cominciamo!Inserisci il codice ISBN:");
      int codiceISSN = sh.nextInt();
-     sh.nextLine(); // Consuma il carattere di fine linea
+     sh.nextLine(); 
 
      System.out.println("Inserisci il titolo:");
      String titolo1 = sh.nextLine();
 
      System.out.println("Inserisci l'anno di pubblicazione:");
      int annoPubblicazione1 = sh.nextInt();
-     sh.nextLine(); // Consuma il carattere di fine linea
+     sh.nextLine(); 
 
      System.out.println("Inserisci il numero di pagine:");
      int numPagine1 = sh.nextInt();
-     sh.nextLine(); // Consuma il carattere di fine linea
+     sh.nextLine(); 
 
      System.out.println("Inserisci la periodicità (SETTIMANALE, MENSILE, BIMESTRALE, TRIMESTRALE, SEMESTRALE, ANNUALE):");
      Periodicità periodicità = Periodicità.valueOf(sh.nextLine().toUpperCase());
