@@ -68,7 +68,7 @@ public class Main  {
      // Aggiunta di una nuova rivista all'archivio
         Scanner sh = new Scanner(System.in);
 
-     // Aggiunta di una nuova rivista all'archivio
+    
      System.out.println("Aggiungi una rivista nuova, cominciamo!Inserisci il codice ISBN:");
      int codiceISSN = sh.nextInt();
      sh.nextLine(); 
